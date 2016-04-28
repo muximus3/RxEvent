@@ -22,7 +22,7 @@ STEP 2
 ------
 
 The simplest way of using RxEvent is extending your Activity/Fragment from `BaseActivity`/`BaseFragment`,
-if you already have a `BaseActivity`/`BaseFragment`, you may write [these codes](https://github.com/muximus3/RxEvent/blob/master/rxbus/src/main/java/rxbus/BaseActivity.java) in your `BaseActivity`/`BaseFragment`, or check "Other use" in the <h1 id="user-content-bottom">bottom</h1>.
+if you already have a `BaseActivity`/`BaseFragment`, you may write [these codes](https://github.com/muximus3/RxEvent/blob/master/rxbus/src/main/java/rxbus/BaseActivity.java) in your `BaseActivity`/`BaseFragment`, or check "Other use" in the [问内链接](#user-content-bottom).
 
 you must override two methods:
 
@@ -67,7 +67,7 @@ if (RxBus.getInstance().hasObservers()) RxBus.getInstance().sendMission(objectIn
 
 
 ### Other use (eg: in your own view) 
-[问内链接](#user-content-bottom);
+<h1 id="user-content-bottom"></h1>.
 ``` java
 public class MyView extends .. {
        private  CompositeSubscription subscriptions;
