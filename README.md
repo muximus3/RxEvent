@@ -4,7 +4,7 @@ and [Kaushik Gopal's blog](http://nerds.weddingpartyapp.com/tech/2014/12/24/impl
 
 ## Notice 
 
-- RxEvent is the simplest way to communicate in app, also with least codes to write. But Please do not heavy use it, that would be harmful to your app infrastructure.
+- RxEvent is the simplest way to communicate in app, also with least codes to write. But Please do not heavy use it, that would be harmful to your app infrastructure. eg: In my project i use this for communication between a single Fragment item in ViewPager and Its Activity.
 - RxEvent would sent `Object` instantly, so make sure Activity/Fragment in it's lifecycle, when you want emit messages to them.
 - if your Activity/Fragment extend from  `BaseActivity`/`BaseFragment`, RxEvent would unRegister automatically, when the lifecycle is `onStop()`.
  
@@ -22,6 +22,7 @@ STEP 2
 ------
 
 The simplest way of using RxEvent is extending your Activity/Fragment from `BaseActivity`/`BaseFragment`,
+if you already have a `BaseActivity`/`BaseFragment`, you may write [these codes](https://github.com/muximus3/RxEvent/blob/master/rxbus/src/main/java/rxbus/BaseActivity.java) in your `BaseActivity`/`BaseFragment`, or check "Other use" in the bottom.
 
 you must override two methods:
 
@@ -32,8 +33,8 @@ protected abstract void onNewMission(Object object);
 
 #### get a message/mission from anywhere
 
-You should return `true` in `wantMission()`, if you want obtain mission/message, otherwise `false`.
-Then in `onNewMission()`, just write detail operation about the message.
+If you want obtain mission/message, you should return `true` in `wantMission()`,otherwise `false`.
+Then just write detail operation about the message in `onNewMission()`.
 
 ``` java
 public class MainActivity extends BaseActivity {
