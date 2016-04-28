@@ -1,5 +1,5 @@
 # RxEvent
-A simple EventBus for communication/sending message between Activity, Fragment, thread, or any component. Base on [Rxjava](https://github.com/ReactiveX/RxJava)
+A simple way for communication/sending message between Activity, Fragment, thread, or any component. Base on [Rxjava](https://github.com/ReactiveX/RxJava)
 and [Kaushik Gopal's blog](http://nerds.weddingpartyapp.com/tech/2014/12/24/implementing-an-event-bus-with-rxjava-rxbus/)
 
 ## Notice 
@@ -22,7 +22,7 @@ STEP 2
 ------
 
 The simplest way of using RxEvent is extending your Activity/Fragment from `BaseActivity`/`BaseFragment`,
-if you already have a `BaseActivity`/`BaseFragment`, you may write [these codes](https://github.com/muximus3/RxEvent/blob/master/rxbus/src/main/java/rxbus/BaseActivity.java) in your `BaseActivity`/`BaseFragment`, or check "Other use" in the bottom.
+if you already have a `BaseActivity`/`BaseFragment`, you may write [these codes](https://github.com/muximus3/RxEvent/blob/master/rxbus/src/main/java/rxbus/BaseActivity.java) in your `BaseActivity`/`BaseFragment`, or check "Other use" in the <h1 id="user-content-bottom">bottom</h1>.
 
 you must override two methods:
 
@@ -66,8 +66,8 @@ if (RxBus.getInstance().hasObservers()) RxBus.getInstance().sendMission(objectIn
 ```
 
 
-### Other use (eg: in your own view)
-
+### Other use (eg: in your own view) 
+[问内链接](#user-content-bottom);
 ``` java
 public class MyView extends .. {
        private  CompositeSubscription subscriptions;
