@@ -28,7 +28,7 @@ you must override two methods:
 `protected abstract boolean wantMission();`
 `protected abstract void onNewMission(Object object);`
 
-- ###get a message/mission from anywhere
+#### get a message/mission from anywhere
 
 You should return `true` in `wantMission()`, if you want obtain mission/message, otherwise `false`.
 Then in `onNewMission()`,just write detail operation about the message.
