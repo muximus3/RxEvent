@@ -66,6 +66,7 @@ if (RxBus.getInstance().hasObservers()) RxBus.getInstance().sendMission(objectIn
 ```
 
 
+
 ### Other use (eg: in your own view) <h1 id="user-content-bottom"></h1>
 ``` java
 public class MyView extends .. {
