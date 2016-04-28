@@ -23,10 +23,11 @@ STEP 2
 
 The simplest way of using RxEvent is extending your Activity/Fragment from `BaseActivity`/`BaseFragment`,
 
-you must override two methods
-`protected abstract boolean wantMission();
-   protected abstract void onNewMission(Object object);
-`
+you must override two methods:
+
+`protected abstract boolean wantMission();`
+`protected abstract void onNewMission(Object object);`
+
 - ###get a message/mission from anywhere
 
 You should return `true` in `wantMission()`, if you want obtain mission/message, otherwise `false`.
@@ -82,8 +83,7 @@ public class MyView extends .. {
        }
    } 
 ```
-- ### Detail usage check the 
-
+### Detail usage check the 
 [sample](https://github.com/muximus3/RxEvent/tree/master/sample/src/main/java/sample)
 
 
